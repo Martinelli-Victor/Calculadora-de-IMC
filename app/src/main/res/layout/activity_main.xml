@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:background="@drawable/fundo">
+
+    <TextView
+            android:text="Peso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp" android:textSize="20sp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/skbPeso"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"/>
+    <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" android:textSize="18sp" app:layout_constraintStart_toStartOf="@+id/skbPeso"
+            app:layout_constraintTop_toBottomOf="@+id/skbPeso" android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"/>
+    <TextView
+            android:text="200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/skbPeso" app:layout_constraintEnd_toEndOf="@+id/skbPeso"
+            android:textSize="18sp" android:layout_marginTop="2dp"/>
+    <TextView
+            android:text="Altura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp" android:textSize="20sp"/>
+    <SeekBar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/skbAltura"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="20dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"/>
+    <TextView
+            android:text="1.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10" app:layout_constraintStart_toStartOf="@+id/skbAltura"
+            android:layout_marginStart="4dp" app:layout_constraintTop_toBottomOf="@+id/skbAltura"
+            android:layout_marginTop="2dp" android:textSize="18sp"/>
+    <TextView
+            android:text="2.50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/skbAltura" app:layout_constraintEnd_toEndOf="@+id/skbAltura"
+            android:layout_marginTop="2dp" android:textSize="18sp"/>
+    <TextView
+            android:text="Sexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp" android:textSize="20sp"/>
+    <Spinner
+            android:layout_width="143dp"
+            android:layout_height="30dp"
+            android:id="@+id/spnSexo" app:layout_constraintStart_toEndOf="@+id/textView12"
+            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="@+id/textView12"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvIndice" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp"
+            android:textSize="20sp" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnResultado" android:text="ÍNDICE"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvClassif"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="50dp" app:layout_constraintTop_toBottomOf="@+id/btnResultado"
+            android:text="CLASSIFICAÇÃO"/>
+    <Button
+            android:text="Visualizar tabela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTabela" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent" android:textSize="12sp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/colorPrimary"/>
+    <Button
+            android:text="Resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnResultado" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/spnSexo" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:textSize="14sp" android:backgroundTint="@color/colorPrimary"/>
+    <TextView
+            android:text="0Kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvPeso" app:layout_constraintStart_toEndOf="@+id/textView"
+            android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@+id/textView"
+            android:textSize="20sp"/>
+    <TextView
+            android:text="1.0m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvAltura" app:layout_constraintStart_toEndOf="@+id/textView9"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@+id/textView9" android:textSize="20sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvI" app:layout_constraintStart_toStartOf="@+id/txvIndice"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/txvIndice" android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/txvIndice" android:text="0"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txvC" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/txvClassif" app:layout_constraintEnd_toEndOf="@+id/txvClassif"
+            android:textSize="20sp" app:layout_constraintStart_toStartOf="@+id/txvClassif" android:text="0"/>
+    <ImageView
+            android:layout_width="53dp"
+            android:layout_height="69dp" app:srcCompat="@drawable/homem"
+            android:id="@+id/imvHomem" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnResultado" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnTabela" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"/>
+    <ImageView
+            android:layout_width="54dp"
+            android:layout_height="69dp" app:srcCompat="@drawable/mulher"
+            android:id="@+id/imvMulher" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnResultado" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnTabela" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
